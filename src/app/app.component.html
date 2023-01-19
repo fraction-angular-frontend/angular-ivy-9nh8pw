@@ -1,0 +1,44 @@
+<div id="wrapper">
+  <div id="cars-list">
+    <div id="list">
+      <h2>Cars List</h2>
+
+      <div class="container">
+        <div class="headers">
+          <div>Name</div>
+          <div>Number</div>
+
+          <div>
+            <button class="button-color" (click)="toggleCar()">ADD CAR</button>
+          </div>
+        </div>
+        <div class="headers" *ngIf="showadd">
+          <div><input type="text" [(ngModel)]="carinput.name" required /></div>
+          <div>
+            <input
+              type="text"
+              [(ngModel)]="carinput.cnumber"
+              [pattern]=pattern
+              minlength="6"
+              maxlength="6"
+              required
+            />
+          </div>
+          <div>
+            <input type="button" value="Save Details" (click)="saveCar()" />
+          </div>
+        </div>
+        <div class="item" *ngFor="let car of carslist | async">
+          <div>{{ car.name }}</div>
+          <div>{{ car.cnumber }}</div>
+          <div>
+            <button class="delete-color" (click)="deleteCar(car.id)">
+              DELETE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <testcomponent></testcomponent>
+</div>

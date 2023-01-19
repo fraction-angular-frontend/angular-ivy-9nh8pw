@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid slategray;
+}
+
+.button-color {
+  background-color: rgb(58, 129, 58);
+  width: 100px;
+}
+
+.delete-color {
+  background-color: rgb(245, 56, 56);
+  width: 100px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgb(201, 189, 189);
+}
+.item > div {
+  padding: 5px;
+  margin-left: 5px;
+
+  min-width: 50px;
+  width: 20%;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.headers {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(81, 82, 83);
+  background-color: rgb(172, 172, 172);
+}
+.headers > div {
+  min-width: 50px;
+  margin-left: 5px;
+  padding: 5px;
+  width: 20%;
+  text-overflow: ellipsis;
+  text-align: left;
+}

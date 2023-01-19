@@ -1,0 +1,15 @@
+<div id="wrapper">
+  <div id="cars-list">
+    <div id="list">
+      <h4>List of car owners and the number plates</h4>
+      <ul>
+        <p><b>Owner</b> - <b>No. Plate</b></p>
+        <li *ngFor="let car of carslist | async">
+          <span>{{ car.name }}</span>
+          <span> - </span>
+          <span>{{ car.cnumber }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
